@@ -1,0 +1,484 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@200;300;400&display=swap');
+
+.kaelan-flashback {
+  max-width: 800px;
+  margin: 30px auto;
+  background: linear-gradient(160deg, #0a0a0a 0%, #1a1214 50%, #0a0a0a 100%);
+  border: 1px solid #1a1a1a;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.9), inset 0 0 100px rgba(74, 85, 104, 0.03);
+  font-family: 'Montserrat', sans-serif;
+  color: #9a9a9a;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Texture grain effect */
+.kaelan-flashback::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(74, 85, 104, 0.03) 2px,
+    rgba(74, 85, 104, 0.03) 4px
+  );
+  pointer-events: none;
+  opacity: 0.4;
+}
+
+/* HEADER */
+.kaelan-flashback-header {
+  background: linear-gradient(180deg, #0d0d0d 0%, rgba(13, 13, 13, 0.8) 100%);
+  padding: 0;
+  border-bottom: 2px solid #1a1214;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Warning Banner */
+.kaelan-warning-banner {
+  background: linear-gradient(90deg, #1a0a0a 0%, #2a0808 50%, #1a0a0a 100%);
+  border-bottom: 1px solid #3a1010;
+  padding: 12px 30px;
+  text-align: center;
+  position: relative;
+}
+
+.kaelan-warning-icon {
+  display: inline-block;
+  color: #8B4A4A;
+  font-size: 16px;
+  margin-right: 10px;
+  animation: pulse-warning 2s ease-in-out infinite;
+}
+
+@keyframes pulse-warning {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; }
+}
+
+.kaelan-warning-text {
+  font-size: 9px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #9a7a7a;
+  font-weight: 600;
+  display: inline-block;
+}
+
+/* Title Section */
+.kaelan-flashback-title-section {
+  padding: 35px 40px 25px;
+  position: relative;
+}
+
+.kaelan-flashback-type {
+  font-size: 8px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #5a5a5a;
+  margin: 0 0 15px 0;
+  font-weight: 300;
+  opacity: 0.7;
+}
+
+.kaelan-flashback-type::before {
+  content: '◆';
+  margin-right: 10px;
+  color: #4A5568;
+  font-size: 6px;
+}
+
+.kaelan-flashback-title {
+  font-family: 'Crimson Text', serif;
+  font-size: 32px;
+  color: #b8b8b8;
+  margin: 0 0 10px 0;
+  font-weight: 400;
+  font-style: italic;
+  line-height: 1.2;
+  letter-spacing: 0.5px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.kaelan-flashback-subtitle {
+  font-size: 11px;
+  color: #6a6a6a;
+  font-style: italic;
+  margin: 8px 0 0 0;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+}
+
+/* Metadata Grid */
+.kaelan-flashback-meta {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  margin-top: 25px;
+  background: #1a1a1a;
+  border: 1px solid #1a1a1a;
+}
+
+.kaelan-meta-item {
+  background: #0a0a0a;
+  padding: 15px 20px;
+  text-align: center;
+  position: relative;
+  transition: background 0.3s ease;
+}
+
+.kaelan-meta-item:hover {
+  background: #0f0f0f;
+}
+
+.kaelan-meta-item::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 20%;
+  right: 20%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #4A5568, transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.kaelan-meta-item:hover::after {
+  opacity: 0.5;
+}
+
+.kaelan-meta-label {
+  font-size: 8px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #5a5a5a;
+  margin: 0 0 8px 0;
+  font-weight: 600;
+}
+
+.kaelan-meta-value {
+  font-size: 12px;
+  color: #8a8a8a;
+  margin: 0;
+  font-weight: 300;
+  font-family: 'Crimson Text', serif;
+  font-style: italic;
+}
+
+/* CONTENT AREA */
+.kaelan-flashback-content {
+  padding: 45px 50px;
+  font-size: 13.5px;
+  line-height: 2;
+  color: #9a9a9a;
+  position: relative;
+}
+
+/* Section Markers (ACT I, ACT II, etc.) */
+.kaelan-act-marker {
+  text-align: center;
+  margin: 50px 0 40px;
+  position: relative;
+}
+
+.kaelan-act-marker::before,
+.kaelan-act-marker::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 30%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #2a2a2a, transparent);
+}
+
+.kaelan-act-marker::before {
+  left: 0;
+}
+
+.kaelan-act-marker::after {
+  right: 0;
+}
+
+.kaelan-act-title {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 16px;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  color: #6a6a6a;
+  font-weight: 700;
+  display: inline-block;
+  background: #0a0a0a;
+  padding: 0 25px;
+  position: relative;
+}
+
+.kaelan-act-subtitle {
+  display: block;
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: #5a5a5a;
+  margin-top: 8px;
+  font-weight: 300;
+  font-style: italic;
+}
+
+/* Paragraphs */
+.kaelan-flashback-content p {
+  margin: 0 0 22px 0;
+  text-align: justify;
+  transition: color 0.3s ease;
+}
+
+.kaelan-flashback-content p:hover {
+  color: #b0b0b0;
+}
+
+/* Memory Fragments (Italics/Thoughts) */
+.kaelan-memory-fragment {
+  font-style: italic;
+  color: #7a8a9a;
+  padding: 18px 25px;
+  border-left: 2px solid #4A5568;
+  margin: 25px 0;
+  background: rgba(74, 85, 104, 0.04);
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.kaelan-memory-fragment::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(180deg, transparent, #6B7A96, transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.kaelan-memory-fragment:hover {
+  padding-left: 30px;
+  background: rgba(74, 85, 104, 0.08);
+}
+
+.kaelan-memory-fragment:hover::before {
+  opacity: 1;
+}
+
+/* Dialogue */
+.kaelan-flashback-dialogue {
+  color: #8a9aaa;
+  position: relative;
+  padding-left: 20px;
+  margin: 15px 0;
+}
+
+.kaelan-flashback-dialogue::before {
+  content: '\2014';
+  position: absolute;
+  left: 0;
+  color: #5a6a7a;
+  font-weight: 700;
+}
+
+/* Dissociation Breaks (separators) */
+.kaelan-dissociation-break {
+  text-align: center;
+  margin: 40px 0;
+  position: relative;
+}
+
+.kaelan-dissociation-break::before {
+  content: '◆  ◆  ◆';
+  color: #3a3a3a;
+  font-size: 8px;
+  letter-spacing: 8px;
+  display: block;
+  opacity: 0.4;
+}
+
+/* Trauma Separator (visual break between acts) */
+.kaelan-trauma-separator {
+  height: 60px;
+  margin: 50px 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.kaelan-trauma-separator::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #2a2a2a, transparent);
+}
+
+.kaelan-trauma-separator::after {
+  content: '⬥';
+  color: #4A5568;
+  font-size: 12px;
+  background: #0a0a0a;
+  padding: 0 20px;
+  position: relative;
+  opacity: 0.5;
+}
+
+/* Lists (for fragmented thoughts) */
+.kaelan-flashback-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 25px 0;
+}
+
+.kaelan-flashback-content li {
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 12px;
+  color: #8a8a8a;
+  font-size: 13px;
+}
+
+.kaelan-flashback-content li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: #5a5a5a;
+}
+
+/* FOOTER */
+.kaelan-flashback-footer {
+  background: linear-gradient(180deg, rgba(10, 10, 10, 0.6) 0%, #0a0a0a 100%);
+  padding: 25px 40px;
+  border-top: 1px solid #1a1a1a;
+}
+
+/* Tags */
+.kaelan-flashback-tags {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.kaelan-flashback-tag {
+  font-size: 8px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #5a5a5a;
+  padding: 6px 12px;
+  background: rgba(13, 13, 13, 0.8);
+  border: 1px solid #1a1a1a;
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+.kaelan-flashback-tag:hover {
+  color: #7a8a9a;
+  border-color: #2a2a2a;
+  background: rgba(20, 20, 20, 0.8);
+}
+
+.kaelan-flashback-tag::before {
+  content: '#';
+  margin-right: 4px;
+  color: #4a4a4a;
+}
+
+/* Stats Bar */
+.kaelan-flashback-stats {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+  border-top: 1px solid #1a1a1a;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.kaelan-flashback-wordcount {
+  font-size: 9px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #4a4a4a;
+  padding: 5px 15px;
+  background: rgba(13, 13, 13, 0.6);
+  border: 1px solid #1a1a1a;
+}
+
+.kaelan-flashback-wordcount::after {
+  content: ' words';
+  margin-left: 5px;
+}
+
+.kaelan-flashback-timestamp {
+  font-size: 9px;
+  letter-spacing: 1px;
+  color: #3a3a3a;
+  font-style: italic;
+  font-family: 'Crimson Text', serif;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .kaelan-flashback-meta {
+    grid-template-columns: 1fr;
+  }
+  
+  .kaelan-flashback-content {
+    padding: 30px 25px;
+  }
+  
+  .kaelan-flashback-title-section {
+    padding: 25px 25px 20px;
+  }
+  
+  .kaelan-flashback-title {
+    font-size: 26px;
+  }
+}
+
+/* SPECIAL EFFECTS */
+
+/* Glitch effect on hover (subtle) */
+@keyframes glitch {
+  0% { transform: translate(0); }
+  20% { transform: translate(-1px, 1px); }
+  40% { transform: translate(-1px, -1px); }
+  60% { transform: translate(1px, 1px); }
+  80% { transform: translate(1px, -1px); }
+  100% { transform: translate(0); }
+}
+
+.kaelan-flashback:hover .kaelan-flashback-title {
+  animation: glitch 0.3s ease-in-out;
+}
+
+/* Fade in animation */
+@keyframes fadeInContent {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.kaelan-flashback-content > * {
+  animation: fadeInContent 0.6s ease-out backwards;
+}
+
+.kaelan-flashback-content > *:nth-child(1) { animation-delay: 0.1s; }
+.kaelan-flashback-content > *:nth-child(2) { animation-delay: 0.2s; }
+.kaelan-flashback-content > *:nth-child(3) { animation-delay: 0.3s; }
